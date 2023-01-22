@@ -97,3 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f415def2a594bb192c42fa5b6d1216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balls:
+  - {fileID: 5314467441770634450, guid: b46b95d11ece94f858e7969bcf64aef0, type: 3}
+  - {fileID: 6792587992021394055, guid: 60d96cb83475b48f9803b374480bdb79, type: 3}
+  - {fileID: 4021145676842793834, guid: ccf8f9ed081bc42c18c9d8202382ce24, type: 3}
+  - {fileID: 5116183388850836745}
+  - {fileID: 2837920779128519927, guid: 3c74bcced04f7426ba9500acaee4e3a6, type: 3}
+  - {fileID: 1502785643771685390, guid: de2c2811bef154d8bac5322c01b0051c, type: 3}
