@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    //スクリプトと結びつけ
+    [SerializeField]
+    private GameObject[] balls;
+
+
     // Start is called before the first frame update
     void Start()
     {
