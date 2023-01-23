@@ -20,6 +20,8 @@ public class Ball : MonoBehaviour
     //ボールの種類数(大)
     private int bigBallCount = 2;
 
+    //生成するオブジェクト格納用
+    private int ballSpawne;
 
 
 
