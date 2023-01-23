@@ -28,7 +28,6 @@ public class Ball : MonoBehaviour
     private List<GameObject> smallGreenPool,smallRedPool, mediumGreenPool, mediumRedPool, bigGreenPool, bigRedPool;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -40,4 +39,27 @@ public class Ball : MonoBehaviour
     {
         
     }
+
+
 }
+
+
+
+  public GameObject target;
+ 
+    void Start()
+    {
+        target = GameObject.Find ("CubeParent");
+    }
+ 
+    public void ObjChange()
+    {
+        if (target.activeSelf)
+        {
+            target.SetActive(false);
+        }
+        else
+        {
+            target.SetActive(true);
+        }
+    }
