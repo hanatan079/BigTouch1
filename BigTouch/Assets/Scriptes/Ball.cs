@@ -9,10 +9,18 @@ public class Ball : MonoBehaviour
     [SerializeField]
     private GameObject smallGreen, smallRed, mediumGreen, mediumRed, bigGreen, bigRed;
 
-    //スポーンの生成場所用
+    //ボールの生成場所用
     [SerializeField]
     private float minPosX = -8.5f, maxPosX = 8.5f;
     private float minPosY = -4.5f, maxPosY = 4.5f;
+
+    //ボールの種類数(大以外)
+    private int ballCount = 4;
+
+    //ボールの種類数(大)
+    private int bigBallCount = 2;
+
+
 
 
     // Start is called before the first frame update
