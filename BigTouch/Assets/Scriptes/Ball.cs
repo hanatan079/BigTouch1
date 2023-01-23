@@ -23,6 +23,10 @@ public class Ball : MonoBehaviour
     //生成するオブジェクト格納用
     private int ballSpawne;
 
+    //生成したオブジェクト管理用リスト
+    [SerializeField]
+    private List<GameObject> smallGreenPool,smallRedPool, mediumGreenPool, mediumRedPool, bigGreenPool, bigRedPool;
+
 
 
     // Start is called before the first frame update
