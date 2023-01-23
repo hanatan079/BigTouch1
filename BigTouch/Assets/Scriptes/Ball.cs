@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    //スクリプトと結びつけ
+
+    //ball格納
     [SerializeField]
-    private GameObject[] balls;
+    private GameObject smallGreen, smallRed, mediumGreen, mediumRed, bigGreen, bigRed;
 
 
     // Start is called before the first frame update
@@ -20,6 +21,4 @@ public class Ball : MonoBehaviour
     {
         
     }
-
-    
 }
