@@ -23,6 +23,9 @@ public class Ball : MonoBehaviour
     //生成するオブジェクト格納用
     private int ballSpawne;
 
+    //ゲームオブジェクト格納
+    public GameObject getBall;
+
     //生成したオブジェクト管理用リスト
     [SerializeField]
     private List<GameObject> smallGreenPool,smallRedPool, mediumGreenPool, mediumRedPool, bigGreenPool, bigRedPool;
@@ -31,7 +34,10 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //タグでゲームオブジェクトを取得
+        getBall = GameObject.Find("TwoSizeBall");
+        getBall = GameObject.Find("BigSizeBall");
+
     }
 
     // Update is called once per frame
@@ -40,26 +46,4 @@ public class Ball : MonoBehaviour
         
     }
 
-
 }
-
-
-
-  public GameObject target;
- 
-    void Start()
-    {
-        target = GameObject.Find ("CubeParent");
-    }
- 
-    public void ObjChange()
-    {
-        if (target.activeSelf)
-        {
-            target.SetActive(false);
-        }
-        else
-        {
-            target.SetActive(true);
-        }
-    }
