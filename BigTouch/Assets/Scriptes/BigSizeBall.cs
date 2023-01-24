@@ -8,15 +8,18 @@ public class BigSizeBall : MonoBehaviour
     //生成するBIGブロックを格納
     public GameObject[] balls;
 
-    // Start is called before the first frame update
-    void Start()
+    //ランダムなブロックを1つ選ぶ
+    GameObject GetBigBall()
     {
-        
+        int i = Random.Range(0, balls.Length);
+        if(balls[i])
+        {
+            return balls[i];
+        }
+        else
+        {
+            return null;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
