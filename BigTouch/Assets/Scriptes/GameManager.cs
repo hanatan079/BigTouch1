@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //生成された大きいボール格納
+    BigSizeBall bigSizeBall;
 
     //生成されたボール格納
     GameObject activeBall;
