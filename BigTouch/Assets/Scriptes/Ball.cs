@@ -60,13 +60,13 @@ public class Ball : MonoBehaviour
     //BigBallか判定
     void OnBigBall()
     {
-        if(getBall)
+        if(bigSizeGetBall)
         {
-            //ランダムな場所へボールを表示
+            //大きいのならランダムな場所へボールを再表示
         }
         else if()
         {
-            //
+            //大きいの以外なら揺れる振動
         }
     }
 
