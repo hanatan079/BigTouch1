@@ -24,7 +24,8 @@ public class Ball : MonoBehaviour
     private int ballSpawne;
 
     //ゲームオブジェクト格納
-    public GameObject getBall;
+    public GameObject twoSizegetBall;
+    public GameObject bigSizeGetBall;
 
     //生成したオブジェクト管理用リスト
     [SerializeField]
@@ -35,8 +36,8 @@ public class Ball : MonoBehaviour
     void Start()
     {
         //タグでゲームオブジェクトを取得
-        getBall = GameObject.Find("TwoSizeBall");
-        getBall = GameObject.Find("BigSizeBall");
+        twoSizegetBall = GameObject.Find("TwoSizeBall");
+        bigSizeGetBall = GameObject.Find("BigSizeBall");
 
     }
 
@@ -44,6 +45,29 @@ public class Ball : MonoBehaviour
     void Update()
     {
         
+    }
+
+    ///表示させる
+    void DisplayBall()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            //BigBallか判定
+
+        }
+    }
+
+    //BigBallか判定
+    void OnBigBall()
+    {
+        if(getBall)
+        {
+            //ランダムな場所へボールを表示
+        }
+        else if()
+        {
+            //
+        }
     }
 
 }
