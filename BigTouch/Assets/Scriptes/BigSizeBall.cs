@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BigSizeBall : MonoBehaviour
 {
+
+    //生成するBIGブロックを格納
+    public GameObject[] balls;
+
     // Start is called before the first frame update
     void Start()
     {
