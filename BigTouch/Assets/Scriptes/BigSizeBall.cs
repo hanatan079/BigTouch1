@@ -22,4 +22,18 @@ public class BigSizeBall : MonoBehaviour
         }
     }
 
+    //選ばれたブロックを生成する関数
+    public GameObject SpawnBall()
+    {
+        GameObject bigBall = Instantiate(GetBigBall(), transform.position, Quaternion.identity);
+        if(bigBall)
+        {
+            return bigBall;
+        } 
+        else
+        {
+            return null;
+        }
+    }
+
 }
