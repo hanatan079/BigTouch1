@@ -34,7 +34,7 @@ public class BigSizeBall : MonoBehaviour
     //選ばれたブロックを生成する関数
     public GameObject SpawnBall()
     {
-                //生成場所をランダムで設定
+            //生成場所をランダムで設定
             ballPosX = Random.Range(-8.5f, 8.5f);
             ballPosY = Random.Range(-4.5f, 4.5f);
 
