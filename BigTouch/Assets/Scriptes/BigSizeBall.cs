@@ -6,15 +6,15 @@ public class BigSizeBall : MonoBehaviour
 {
 
     //生成するBIGブロックを格納
-    public GameObject[] balls;
+    public GameObject[] bigBalls;
 
     //ランダムなブロックを1つ選ぶ
     GameObject GetBigBall()
     {
-        int i = Random.Range(0, balls.Length);
-        if(balls[i])
+        int i = Random.Range(0, bigBalls.Length);
+        if(bigBalls[i])
         {
-            return balls[i];
+            return bigBalls[i];
         }
         else
         {

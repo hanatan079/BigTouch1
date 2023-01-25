@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //生成された大きいボール格納
+    //生成された大きいボール格納(大)
     BigSizeBall bigSizeBall;
 
     //生成されたボール格納
@@ -19,12 +19,16 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        //オブジェクトを格納
+        //大きいボールのオブジェクトを格納
         bigSizeBall = GameObject.FindObjectOfType<BigSizeBall>();
         if(!activeBall)
         {
             activeBall = bigSizeBall.SpawnBall();
         }
+
+
+
+
 
         //大きいボールの位置調整
        // bigBallSize.transform.position = //ここからここまででランダムな場所へ表示する
@@ -75,3 +79,4 @@ public class GameManager : MonoBehaviour
             Instantiate(PrefabCube, pos, Quaternion.identity);
         }    
 */
+

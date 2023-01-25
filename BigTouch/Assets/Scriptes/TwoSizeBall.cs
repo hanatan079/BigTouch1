@@ -9,15 +9,31 @@ public class TwoSizeBall : MonoBehaviour
     public GameObject[] twoSizeBalls;
 
 
-    // Start is called before the first frame update
-    void Start()
+    //ランダムなブロックを1つ選ぶ
+    GameObject GetTwoSizeBall()
     {
-        
+        int i = Random.Range(0, twoSizeBalls.Length);
+        if(twoSizeBalls[i])
+        {
+            return twoSizeBalls[i];
+        }
+        else
+        {
+            return null;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    //選ばれたブロックを生成する関数
+    public GameObject SpawnTwoSizeBall()
     {
-        
+        GameObject twoSizeBall = Instantiate(GetTwoSizeBall(), transform.position, Quaternion.identity);
+        if(twoSizeBall)
+        {
+            return twoSizeBall;
+        } 
+        else
+        {
+            return null;
+        }
     }
 }
