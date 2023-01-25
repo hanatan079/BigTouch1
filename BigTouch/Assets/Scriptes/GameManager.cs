@@ -11,8 +11,14 @@ public class GameManager : MonoBehaviour
     TwoSizeBall twoSizeBall;
 
 
-    //生成されたボール格納
-    GameObject activeBall;
+    //生成されたボール格納(大)
+    GameObject activeBigBall;
+
+    //生成されたボール格納(中小)
+    GameObject activeTwoSizeBall;
+
+
+
 
     //ポシション格納用
     private float ballPosX, ballPosY;
@@ -25,16 +31,16 @@ public class GameManager : MonoBehaviour
     {
         //大きいボールのオブジェクトを格納
         bigSizeBall = GameObject.FindObjectOfType<BigSizeBall>();
-        if(!activeBall)
+        if(!activeBigBall)
         {
-            activeBall = bigSizeBall.SpawnBall();
+            activeBigBall = bigSizeBall.SpawnBall();
         }
 
          //中小オブジェクトを格納
         twoSizeBall = GameObject.FindObjectOfType<TwoSizeBall>();
-        if(!activeBall)
+        if(!activeTwoSizeBall)
         {
-            activeBall = twoSizeBall.SpawnTwoSizeBall();
+            activeTwoSizeBall = twoSizeBall.SpawnTwoSizeBall();
         }
 
         //大きいボールの位置調整
