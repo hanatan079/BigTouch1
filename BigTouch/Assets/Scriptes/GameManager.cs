@@ -37,11 +37,6 @@ public class GameManager : MonoBehaviour
             activeBall = twoSizeBall.SpawnTwoSizeBall();
         }
 
-
-
-
-
-
         //大きいボールの位置調整
        // bigBallSize.transform.position = //ここからここまででランダムな場所へ表示する
 
@@ -62,9 +57,9 @@ public class GameManager : MonoBehaviour
     //生成場所をランダムで設定
      void BallPos()
     {
-        ballPosX = Random.Range(-8.5f, 8.5f);
-        ballPosY = Random.Range(-4.5f, 4.5f);
-        ballPos = new Vector3(ballPosX,ballPosY, 0);
+            ballPosX = Random.Range(-8.5f, 8.5f);
+            ballPosY = Random.Range(-4.5f, 4.5f);
+            ballPos = new Vector3(ballPosX,ballPosY, 0);
     }
 
 }

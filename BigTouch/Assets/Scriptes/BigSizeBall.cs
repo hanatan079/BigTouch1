@@ -8,7 +8,7 @@ public class BigSizeBall : MonoBehaviour
     //生成するBIGブロックを格納
     public GameObject[] bigBalls;
 
-    //ランダムなブロックを1つ選ぶ
+    //ランダムなブロックを1つ選ぶ 
     GameObject GetBigBall()
     {
         int i = Random.Range(0, bigBalls.Length);
@@ -21,6 +21,7 @@ public class BigSizeBall : MonoBehaviour
             return null;
         }
     }
+   
 
     //選ばれたブロックを生成する関数
     public GameObject SpawnBall()
