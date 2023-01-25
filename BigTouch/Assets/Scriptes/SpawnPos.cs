@@ -16,3 +16,10 @@ public class SpawnPos : MonoBehaviour
         
     }
 }
+
+
+/*
+生成場所
+ private float minPosX = -8.5f, maxPosX = 8.5f;
+    private float minPosY = -4.5f, maxPosY = 4.5f;
+*/
