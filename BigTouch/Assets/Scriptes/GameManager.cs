@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
     //生成された大きいボール格納(大)
     BigSizeBall bigSizeBall;
 
+    //生成された大きいボール格納(中小)
+    TwoSizeBall twoSizeBall;
+
+
     //生成されたボール格納
     GameObject activeBall;
 
