@@ -17,9 +17,6 @@ public class BigSizeBall : MonoBehaviour
     //生成されたボール格納(大)
     GameObject activeBigBall;
 
-    //生成されたボール格納(中小)
-    GameObject activeTwoSizeBall;
-
 
 
     void Awake()
@@ -30,8 +27,6 @@ public class BigSizeBall : MonoBehaviour
         {
             activeBigBall = bigSizeBall.SpawnBall();
         }
-
-
     }
 
 
