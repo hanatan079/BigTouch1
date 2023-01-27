@@ -8,55 +8,56 @@ public class TwoSizeBall : MonoBehaviour
     //大きいボール以外の配列格納
     public GameObject[] twoSizeBalls;
 
+    //ボールpos格納
+    private float ballPosX, ballPosY;
     
-    void Awake(){
+    //ボール格納用
+    [SerializeField]
+    private GameObject twoSizePrefab;
+
+    //生成したボールオブジェクト格納用
+    private GameObject newTwoSizeBall;
+
+        //新しいポジション生成格納用
+    Vector3 ballPos;
+
+    //生成されたボール格納(中小)
+    GameObject activeTwoSizeBall;
+
+
+
+    
+    void Awake()
+    {
         GetTwoSizeBall();
     }
 
 
 
-
     //配列から取り出す
-    void GetTwoSizeBall()
+    GameObject GetTwoSizeBall()
     {
         for(int i = 0; i < twoSizeBalls.Length; i ++)
         {
-            Debug.Log(twoSizeBalls[i]);
+            //生成場所をランダムで設定
+            ballPosX = Random.Range(-8.5f, 8.5f);
+            ballPosY = Random.Range(-4.5f, 4.5f);
 
-        }
+            newTwoSizeBall = Instantiate(twoSizePrefab,new Vector3(ballPosX, ballPosY, 0), Quaternion.identity);
+            //親オブジェクトを変える
+            newTwoSizeBall.transform.SetParent(transform);
+
+            if(newTwoSizeBall)
+            {
+                return newTwoSizeBall;
+            } 
+            else
+            {
+                return null;
+            }
+
+            }
+            break;
     }
-
-    
 }
 
-
-/*
-    //ランダムなブロックを1つ選ぶ
-    GameObject GetTwoSizeBall()
-    {
-        int i = Random.Range(0, twoSizeBalls.Length);
-        if(twoSizeBalls[i])
-        {
-            return twoSizeBalls[i];
-        }
-        else
-        {
-            return null;
-        }
-    }
-
-
-    //選ばれたブロックを生成する関数
-    public GameObject SpawnTwoSizeBall()
-    {
-        GameObject twoSizeBall = Instantiate(GetTwoSizeBall(), transform.position, Quaternion.identity);
-        if(twoSizeBall)
-        {
-            return twoSizeBall;
-        } 
-        else
-        {
-            return null;
-        }
-    }
-        */

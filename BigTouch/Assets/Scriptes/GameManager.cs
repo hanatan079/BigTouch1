@@ -31,15 +31,6 @@ public class GameManager : MonoBehaviour
             activeBigBall = bigSizeBall.SpawnBall();
         }
 
-/*
-         //中小オブジェクトを格納
-        twoSizeBall = GameObject.FindObjectOfType<TwoSizeBall>();
-        if(!activeTwoSizeBall)
-        {
-            activeTwoSizeBall = twoSizeBall.SpawnTwoSizeBall();
-        }
-
-            */
 
     }
 
