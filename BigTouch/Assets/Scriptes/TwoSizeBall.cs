@@ -9,9 +9,12 @@ public class TwoSizeBall : MonoBehaviour
     public GameObject[] twoSizeBalls;
 
     
-    void Start(){
+    void Awake(){
         GetTwoSizeBall();
     }
+
+
+
 
     //配列から取り出す
     void GetTwoSizeBall()
@@ -22,6 +25,8 @@ public class TwoSizeBall : MonoBehaviour
 
         }
     }
+
+    
 }
 
 
@@ -54,9 +59,4 @@ public class TwoSizeBall : MonoBehaviour
             return null;
         }
     }
-
-    TwoSizeBall' には 'SpawnTwoSizeBall' 
-の定義が含まれておらず、タイプ 'TwoSizeBall' の最初の引数を受け入れるアクセス可能な拡張メソッド
- 'SpawnTwoSizeBall' が見つかりませんでした (あるusing ディレクティブまたはアセンブリ参照がありませんか?)
-
         */
