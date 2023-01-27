@@ -14,6 +14,30 @@ public class BigSizeBall : MonoBehaviour
     //新しいポジション生成格納用
     Vector3 ballPos;
 
+        //生成された大きいボール格納(大)
+    BigSizeBall bigSizeBall;
+
+    //生成されたボール格納(大)
+    GameObject activeBigBall;
+
+    //生成されたボール格納(中小)
+    GameObject activeTwoSizeBall;
+
+
+
+    void Awake()
+    {
+        //大きいボールのオブジェクトを格納
+        bigSizeBall = GameObject.FindObjectOfType<BigSizeBall>();
+        if(!activeBigBall)
+        {
+            activeBigBall = bigSizeBall.SpawnBall();
+        }
+
+
+    }
+
+
 
 
     //ランダムなブロックを1つ選ぶ 
