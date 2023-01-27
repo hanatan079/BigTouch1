@@ -8,45 +8,40 @@ public class TwoSizeBall : MonoBehaviour
     //大きいボール以外の配列格納
     public GameObject[] twoSizeBalls;
 
-    //
-    private GameObject twoSizeBallType;
-
-    //
-    private int count;
-
-    void Start()
-    {
-                    for(int count = 0; count < twoSizeBalls.Length; count ++)
-            {
-                GameObject twoSizeBallType = (GameObject)Resources.Load("Prefab" +count.ToString());
-                twoSizeBalls[count] = twoSizeBallType;
-            }
-
-    }
-
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            PutOut();
-        }
-
-    }
-
     
-    void PutOut()
-    {
-        foreach(GameObject item in twoSizeBalls)
-        {
-            count ++;
-            Instantiate(item,new Vector3(0, 0, count),Quaternion.identity);
-        }
-        count = 0;
+    void Start(){
+        GetTwoSizeBall();
     }
+
+    //配列から取り出す
+    void GetTwoSizeBall()
+    {
+        for(int i = 0; i < twoSizeBalls.Length; i ++)
+        {
+            Debug.Log(twoSizeBalls[i]);
+
+        }
+    }
+}
 
 
 /*
-    //ブロックを生成する関数
+    //ランダムなブロックを1つ選ぶ
+    GameObject GetTwoSizeBall()
+    {
+        int i = Random.Range(0, twoSizeBalls.Length);
+        if(twoSizeBalls[i])
+        {
+            return twoSizeBalls[i];
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+
+    //選ばれたブロックを生成する関数
     public GameObject SpawnTwoSizeBall()
     {
         GameObject twoSizeBall = Instantiate(GetTwoSizeBall(), transform.position, Quaternion.identity);
@@ -60,6 +55,8 @@ public class TwoSizeBall : MonoBehaviour
         }
     }
 
-    */
-    
-}
+    TwoSizeBall' には 'SpawnTwoSizeBall' 
+の定義が含まれておらず、タイプ 'TwoSizeBall' の最初の引数を受け入れるアクセス可能な拡張メソッド
+ 'SpawnTwoSizeBall' が見つかりませんでした (あるusing ディレクティブまたはアセンブリ参照がありませんか?)
+
+        */
