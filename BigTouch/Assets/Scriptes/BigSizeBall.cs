@@ -11,9 +11,6 @@ public class BigSizeBall : MonoBehaviour
     //ポシション格納用
     private float ballPosX, ballPosY;
 
-    //新しいポジション生成格納用
-    Vector3 ballPos;
-
         //生成された大きいボール格納(大)
     BigSizeBall bigSizeBall;
 
@@ -36,7 +33,6 @@ public class BigSizeBall : MonoBehaviour
 
 
     }
-
 
 
 
