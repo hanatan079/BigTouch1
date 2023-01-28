@@ -5,7 +5,7 @@ using UnityEngine;
 public class BigSizeBall : MonoBehaviour
 {
 
-    //生成するBIGブロックを格納
+    //生成するBIGボールを格納
     public GameObject[] bigBalls;
 
     //ポシション格納用
@@ -31,7 +31,7 @@ public class BigSizeBall : MonoBehaviour
 
 
 
-    //ランダムなブロックを1つ選ぶ 
+    //ランダムなボールを1つ選ぶ 
     GameObject GetBigBall()
     {
         int i = Random.Range(0, bigBalls.Length);
@@ -46,7 +46,7 @@ public class BigSizeBall : MonoBehaviour
     }
    
 
-    //選ばれたブロックを生成する関数
+    //選ばれたボールを生成する関数
     public GameObject SpawnBall()
     {
             //生成場所をランダムで設定
