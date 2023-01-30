@@ -41,16 +41,21 @@ public class TwoSizeBall : MonoBehaviour
     }
 
 
-
     //配列から取り出して表示
     void GetTwoSizeBall()
     {
-        //生成場所をランダムで設定
-        ballPosX = Random.Range(-8.5f, 8.5f);
-        ballPosY = Random.Range(-4.5f, 4.5f);
+        foreach(GameObject obj in twoSizeBalls)
+            {
+                //生成場所をランダムで設定
+                ballPosX = Random.Range(-8.5f, 8.5f);
+                ballPosY = Random.Range(-4.5f, 4.5f);
 
-        newTwoSizeBall = Instantiate(twoSizeBalls,new Vector3(ballPosX, ballPosY, 0), Quaternion.identity);
-        //親オブジェクトを変える
-        newTwoSizeBall.transform.SetParent(transform);
+                //ポジション指定
+                Instantiate(obj, new Vector3(ballPosX, ballPosY, 0), Quaternion.identity);
+
+                //親オブジェクトを変える
+                newTwoSizeBall.transform.SetParent(transform);
+            }
     }
 }
+
