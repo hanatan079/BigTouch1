@@ -42,7 +42,7 @@ public class TwoSizeBall : MonoBehaviour
 
 
 
-    //配列から取り出す
+    //配列から取り出して表示
     void GetTwoSizeBall()
     {
         //生成場所をランダムで設定
